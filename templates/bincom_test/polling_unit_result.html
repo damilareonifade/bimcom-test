@@ -1,0 +1,29 @@
+{% extends "../base/base.html" %}
+
+{% block content %}
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Result Id</th>
+        <th scope="col">Polling unit uniqueid</th>
+        <th scope="col">Party abbreviation</th>
+        <th scope="col">Party score </th>
+        <th scope="col">Entered_by_user</th>
+        <th scope="col">Date entered</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for rpu in rpu %}
+      <tr>
+        <th scope="row">1</th>
+        <td>{{ rpu.polling_unit_uniqueid }}</td>
+        <td>{{ rpu.party_abbreviation}}</td>
+        <td>{{ rpu.party_score }}</td>
+        <td> {{ rpu.entered_by_user }}</td>
+        <td> {{ rpu.date_entered }}</td>
+      </tr>
+    {% endfor %}}
+    </tbody>
+</table>
+
+{% endblock %}
